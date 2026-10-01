@@ -1,0 +1,41 @@
+screens:
+  - file: "01-party-home.svg"
+    figma_frame_name: "01 Party Home"
+    width: 440
+    height: 440
+    primary_information_count: 1
+    text_characters_per_string: 12
+    list_item_count: 0
+    gesture_step_count: 1
+    completion_time_seconds: 2
+  - file: "02-find-mode.svg"
+    figma_frame_name: "02 Find Mode"
+    width: 440
+    height: 440
+    primary_information_count: 1
+    text_characters_per_string: 12
+    list_item_count: 0
+    gesture_step_count: 1
+    completion_time_seconds: 2
+    location_audience: party_members_only
+    user_opt_in: true
+    auto_disable_on_party_end: true
+  - file: "03-your-turn.svg"
+    figma_frame_name: "03 Your Turn"
+    width: 440
+    height: 440
+    primary_information_count: 1
+    text_characters_per_string: 11
+    list_item_count: 0
+    gesture_step_count: 1
+    completion_time_seconds: 2
+
+behaviors:
+  find_mode:
+    location_audience: party_members_only
+    user_opt_in: true
+    auto_disable_on_party_end: true
+  return_check:
+    location_audience: party_members_only
+    user_opt_in: true
+    auto_disable_on_party_end: true

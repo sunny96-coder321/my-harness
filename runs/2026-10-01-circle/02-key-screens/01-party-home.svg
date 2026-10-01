@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440">
+  <defs><radialGradient id="bg"><stop stop-color="#303137"/><stop offset="1" stop-color="#101114"/></radialGradient></defs>
+  <circle cx="220" cy="220" r="216" fill="url(#bg)" stroke="#4B4B4E" stroke-width="4"/>
+  <circle cx="220" cy="220" r="192" fill="none" stroke="#45464A" stroke-width="8"/>
+  <circle cx="220" cy="220" r="192" fill="none" stroke="#FA4616" stroke-width="8" stroke-linecap="round" stroke-dasharray="830 376" transform="rotate(-90 220 220)"/>
+  <text x="220" y="108" text-anchor="middle" fill="#C2C2C2" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">PARTY HOME</text>
+  <circle cx="220" cy="183" r="42" fill="#FA4616" opacity=".13"/>
+  <path d="M211 163v40l34-20z" fill="#FA4616"/>
+  <text x="220" y="258" text-anchor="middle" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="27" font-weight="700">MIDNIGHT</text>
+  <text x="220" y="284" text-anchor="middle" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="27" font-weight="700">CITY</text>
+  <text x="220" y="314" text-anchor="middle" fill="#9B9B9D" font-family="Arial,sans-serif" font-size="14">NOVA · 02:18</text>
+  <circle cx="142" cy="365" r="5" fill="#FA4616"/><circle cx="174" cy="365" r="5" fill="#FA4616"/><circle cx="206" cy="365" r="5" fill="#FA4616"/><circle cx="238" cy="365" r="5" fill="#545454"/><circle cx="270" cy="365" r="5" fill="#545454"/>
+  <text x="220" y="393" text-anchor="middle" fill="#C2C2C2" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">3 CONNECTED</text>
+</svg>

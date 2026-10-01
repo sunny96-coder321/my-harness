@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440">
+  <circle cx="220" cy="220" r="216" fill="#A63232" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="4"/>
+  <circle cx="220" cy="220" r="186" fill="none" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="2"/>
+  <text x="220" y="106" text-anchor="middle" fill="#FFFFFF" fill-opacity=".78" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">CIRCLE GAME</text>
+  <circle cx="220" cy="205" r="60" fill="#FFFFFF" fill-opacity=".12"/>
+  <text x="220" y="224" text-anchor="middle" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="52" font-weight="700">3</text>
+  <text x="220" y="306" text-anchor="middle" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="28" font-weight="700">YOUR TURN</text>
+  <text x="220" y="347" text-anchor="middle" fill="#FFFFFF" fill-opacity=".78" font-family="Arial,sans-serif" font-size="16">TAP TO VOTE</text>
+  <path d="M182 382h76" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+</svg>

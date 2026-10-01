@@ -1,0 +1,42 @@
+validation:
+  check_stage_artifact_presence: true
+  check_required_rule_fields: true
+  key_screen_dimensions:
+    enabled: true
+    width: 440
+    height: 440
+  figma_state:
+    required: true
+    verify_file_url_and_node_ids: true
+    compare_export_dimensions: true
+    compare_visible_text: true
+  metric_source: structured_metadata
+  metric_metadata_formats: [json, yaml]
+  metrics:
+    - primary_information_count
+    - text_characters_per_string
+    - list_item_count
+    - gesture_step_count
+    - completion_time_seconds
+    - location_audience
+    - user_opt_in
+    - auto_disable_on_party_end
+  approval_record:
+    required_after_stage: 3
+    verify_input_sha256: true
+    invalidate_if_any_input_changes: true
+  copy_keyword_scan:
+    scope: visible_screen_copy_only
+    scope_fields:
+      - primary_text
+      - supporting_text
+    ignore_rationale_and_rule_descriptions: true
+    phrases: "harness-rules.yaml:copy_keyword_scan.forbidden_phrases"
+
+review_report:
+  include:
+    - stage_artifact_paths
+    - passed_and_failed_rules
+    - human_approval_record
+    - unselected_explorations
+    - final_selection_reason

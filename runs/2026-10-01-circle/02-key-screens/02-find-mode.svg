@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440">
+  <defs><radialGradient id="bg"><stop stop-color="#282A2F"/><stop offset="1" stop-color="#0E0F12"/></radialGradient></defs>
+  <circle cx="220" cy="220" r="216" fill="url(#bg)" stroke="#4B4B4E" stroke-width="4"/>
+  <circle cx="220" cy="220" r="190" fill="none" stroke="#36383C" stroke-width="10"/>
+  <circle cx="220" cy="220" r="190" fill="none" stroke="#FA4616" stroke-width="10" stroke-linecap="round" stroke-dasharray="700 493" transform="rotate(-142 220 220)"/>
+  <circle cx="220" cy="220" r="148" fill="none" stroke="#FA4616" stroke-width="1" opacity=".18"/>
+  <circle cx="220" cy="220" r="104" fill="none" stroke="#FA4616" stroke-width="1" opacity=".12"/>
+  <text x="220" y="102" text-anchor="middle" fill="#C2C2C2" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">FIND MODE</text>
+  <path d="M220 168l24 54-24-12-24 12z" fill="#FA4616"/>
+  <circle cx="220" cy="220" r="9" fill="#FFFFFF"/>
+  <text x="220" y="288" text-anchor="middle" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="24" font-weight="700">MAYA</text>
+  <text x="220" y="326" text-anchor="middle" fill="#FA4616" font-family="Arial,sans-serif" font-size="21" font-weight="700">NEAR</text>
+  <text x="220" y="382" text-anchor="middle" fill="#C2C2C2" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">HOLD TO STOP</text>
+</svg>

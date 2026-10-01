@@ -1,0 +1,14 @@
+gate:
+  status: passed
+  selected_points:
+    - "Circular direction and proximity indicators"
+    - "Consent-based group state"
+    - "Direct, short device gestures"
+  excluded_points:
+    - "Always-on location map"
+    - "SOS feature absent from the PRD"
+    - "Multi-step speaker pairing gestures"
+  source_urls:
+    - "https://www.weareaura.eu/product"
+    - "https://totemlabs.com/products/totem-compass"
+    - "https://www.bose.com/stories/how-to-connect-multiple-bluetooth-speakers"

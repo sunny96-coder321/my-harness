@@ -1,0 +1,36 @@
+preflight:
+  required_context:
+    - "docs/prd.md"
+    - "docs/design.md"
+    - "docs/story-service.md"
+    - "docs/story-work.md"
+  on_missing: stop_and_report
+
+stage_control:
+  run_stages_in_order: true
+  stage_2_requires:
+    - "Figma MCP create_new_file and use_figma tools in the current session"
+    - "Figma MCP get_metadata and get_screenshot tools in the current session"
+    - "Current-session capability manifest and Figma state evidence"
+  recheck_figma_tools_on_every_resume: true
+  on_figma_mcp_unavailable: stop_and_report
+  connection_diagnostic:
+    check_plugin_installed_and_enabled: true
+    distinguish_permission_from_missing_tool_exposure: true
+    do_not_repeat_reconnect_advice_when_plugin_is_enabled: true
+  after_each_stage:
+    run_rules_judge: true
+    continue_only_if_passed: true
+    on_failure: return_to_producing_agent
+
+human_approval:
+  after_stage: 3
+  required_before_stage: 4
+  on_pending: pause_execution
+  persist_record: "runs/<run-id>/03-approval.json"
+  record_command: "ruby scripts/record_approval.rb runs/<run-id> --confirm-human-approval"
+  resume_requires_unchanged_hashes: true
+
+resume:
+  reuse_existing_artifacts_only_if_rules_pass: true
+  start_at: next_incomplete_stage

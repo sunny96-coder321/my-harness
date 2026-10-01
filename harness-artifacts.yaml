@@ -1,0 +1,31 @@
+run_directory: "runs/<run-id>/"
+resume:
+  enabled: true
+  rule: "Validate existing stage artifacts and resume from the next valid stage."
+stages:
+  - id: 1
+    name: reference-analysis
+    artifact: "01-reference-analysis.md"
+    additional_artifacts:
+      - "01-reference-analysis.yaml"
+  - id: 2
+    name: key-screens
+    artifact: "02-key-screens/"
+    additional_artifacts:
+      - "02-key-screens/figma-capabilities.json"
+      - "02-key-screens/figma-state.json"
+  - id: 3
+    name: concept-decision
+    artifact: "03-concept-decision.md"
+    additional_artifacts:
+      - "03-approval.json"
+  - id: 4
+    name: screen-spec-and-explorations
+    artifact: "04-screen-spec-and-explorations.md"
+    additional_artifacts:
+      - "04-ux-copy.md"
+      - "04-ux-copy.yaml"
+  - id: 5
+    name: final-design
+    artifact: "05-final-design/"
+rules_ssot: "harness-rules.yaml"

@@ -1,0 +1,75 @@
+version: 1
+
+checks:
+  - id: one-primary-information
+    scope: circular_screen
+    field: primary_information_count
+    operator: equals
+    value: 1
+
+  - id: circular-screen-text-limit
+    scope: circular_screen
+    field: text_characters_per_string
+    operator: less_than_or_equal
+    value: 20
+
+  - id: no-list-on-circular-screen
+    scope: circular_screen
+    field: list_item_count
+    operator: equals
+    value: 0
+
+  - id: core-gesture-step-limit
+    scope: core_interaction
+    field: gesture_step_count
+    operator: less_than_or_equal
+    value: 1
+
+  - id: core-interaction-time-limit
+    scope: core_interaction
+    field: completion_time_seconds
+    operator: less_than_or_equal
+    value: 3
+
+  - id: location-privacy
+    scope: find_mode_and_return_check
+    required_fields:
+      location_audience:
+        operator: equals
+        value: party_members_only
+      user_opt_in:
+        operator: equals
+        value: true
+      auto_disable_on_party_end:
+        operator: equals
+        value: true
+
+figma_gate:
+  required_tools:
+    - "create_new_file"
+    - "use_figma"
+    - "get_metadata"
+    - "get_screenshot"
+  capabilities_file: "02-key-screens/figma-capabilities.json"
+  required_state_file: "02-key-screens/figma-state.json"
+  verified_via_value: "figma_mcp"
+
+copy_keyword_scan:
+  scope: "visible screen copy only"
+  scope_fields:
+    - primary_text
+    - supporting_text
+  excluded_fields:
+    - rationale
+    - source_notes
+    - rule_descriptions
+  forbidden_phrases:
+    - "SOS"
+
+human_approval:
+  count: 1
+  after_stage: 3
+  description: "Approve the internal concept decision before continuing."
+
+on_failure:
+  action: return_to_producing_stage

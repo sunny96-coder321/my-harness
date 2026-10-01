@@ -1,0 +1,48 @@
+agents:
+  - id: design-researcher
+    role: "Design researcher"
+    stages: [1]
+    edit_folder: "runs/<run-id>/agents/design-researcher/"
+    responsibilities:
+      - "Collect competitor references and analyze them."
+      - "Identify service-relevant reference patterns."
+
+  - id: concept-designer
+    role: "Concept designer"
+    stages: [2, 3, 4]
+    edit_folder: "runs/<run-id>/agents/concept-designer/"
+    responsibilities:
+      - "Create 2–3 circular 440x440 key screens."
+      - "Create the editable Figma Design file using Figma MCP and export evidence from the actual file."
+      - "Prepare the concept decision for human approval after stage 3."
+      - "Develop the screen specification and 2–3 design explorations."
+
+  - id: ux-writer
+    role: "UX writer"
+    stages: [4]
+    edit_folder: "runs/<run-id>/agents/ux-writer/"
+    responsibilities:
+      - "Write concise screen copy from the approved concept and key screens."
+      - "Record per-screen copy and machine-readable counts in 04-ux-copy.md and 04-ux-copy.yaml."
+      - "Respect the circular-screen text limit and one-primary-information rule."
+      - "Hand approved copy to the final designer as stage 5 input."
+
+  - id: final-designer
+    role: "Final designer"
+    stages: [5]
+    edit_folder: "runs/<run-id>/agents/final-designer/"
+    responsibilities:
+      - "Produce and iterate on final components and screen design."
+      - "Record unselected design explorations and the reason for final selection."
+      - "Deliver design tokens, components, and the screen design draft."
+
+judge:
+  id: rules-judge
+  edit_access: false
+  reads:
+    - "harness-rules.yaml"
+    - "runs/<run-id>/"
+  responsibility: "Evaluate artifacts against machine-readable rules without editing them."
+
+trigger:
+  natural_language: "하네스 실행"
